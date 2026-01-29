@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #020617;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+h1 {
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.gender-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.gender-box label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.inputs input,
+.upload input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid #1e293b;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #020617;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+#result {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#score {
+    font-size: 48px;
+    font-weight: bold;
+    color: #22c55e;
+    margin: 15px 0;
+}
+
+#message {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.note {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}

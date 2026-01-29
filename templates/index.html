@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BodyFitScore</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>BodyFitScore</h1>
+    <p class="tagline">Smart fitness insights for real gym progress</p>
+
+    <form id="fitForm">
+        <div class="gender-box">
+            <label>
+                <input type="radio" name="gender" value="male" required>
+                Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female" required>
+                Female
+            </label>
+        </div>
+
+        <div class="inputs">
+            <input type="number" name="height" placeholder="Height (cm) – optional">
+            <input type="number" name="weight" placeholder="Weight (kg) – optional">
+            <input type="number" name="age" placeholder="Age – optional">
+        </div>
+
+        <div class="upload">
+            <input type="file" name="image" accept="image/*" required>
+        </div>
+
+        <button type="submit">Get My BodyFitScore</button>
+    </form>
+
+    <div id="result" class="hidden">
+        <h2>Your BodyFitScore</h2>
+        <div id="score"></div>
+        <p id="message"></p>
+        <p class="note">
+            This score reflects fitness balance and training potential, not appearance or self-worth.
+        </p>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
