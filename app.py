@@ -1,6 +1,6 @@
 import os
 import cv2
-import mediapipe as mp
+from mediapipe.python.solutions import pose as mp_pose
 import numpy as np
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
@@ -17,7 +17,6 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 # =======================
 # MediaPipe setup
 # =======================
-mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(static_image_mode=True)
 
 # -----------------------------
