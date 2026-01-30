@@ -2,6 +2,7 @@ const form = document.getElementById("fitForm");
 const resultBox = document.getElementById("result");
 const scoreEl = document.getElementById("score");
 const messageEl = document.getElementById("message");
+const imageEl = document.getElementById("uploadedImage");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -28,6 +29,8 @@ form.addEventListener("submit", async (e) => {
 
         scoreEl.textContent = `${data.bodyfitscore} / 100`;
         messageEl.textContent = data.message;
+        const imageEl = document.getElementById("uploadedImage");
+        imageEl.style.display = "block";
 
     } catch (err) {
         scoreEl.textContent = "Error";

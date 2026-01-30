@@ -156,7 +156,8 @@ def analyze():
 
     return jsonify({
         "bodyfitscore": score,
-        "message": text
+        "message": text,
+        "image_url": f"/static/uploads/{filename}"
     })
 
 # =======================
