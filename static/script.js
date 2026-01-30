@@ -22,12 +22,18 @@ form.addEventListener("submit", async (e) => {
         const data = await response.json();
 
         if (data.error) {
-            scoreEl.textContent = "Error";
+            scoreEl.textContent = "Unable to Analyze";
             messageEl.textContent = data.error;
+
+            if (data.image_url) {
+                imageEl.src = data.image_url + "?t=" + Date.now();
+                imageEl.style.display = "block";
+            }
             return;
         }
 
-        scoreEl.textContent = `${data.bodyfitscore} / 100`;
+
+        scoreEl.textContent = `${data.bodyfitscore} / 10`;
         messageEl.textContent = data.message;
 
         imageEl.src = data.image_url + "?t=" + Date.now(); // cache-bust
