@@ -14,4 +14,7 @@ RUN pip install --upgrade pip \
 
 COPY . .
 
-CMD gunicorn app:app --bind 0.0.0.0:$PORT
+CMD gunicorn app:app \
+    --bind 0.0.0.0:$PORT \
+    --access-logfile - \
+    --error-logfile -
