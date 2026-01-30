@@ -29,8 +29,10 @@ form.addEventListener("submit", async (e) => {
 
         scoreEl.textContent = `${data.bodyfitscore} / 100`;
         messageEl.textContent = data.message;
-        const imageEl = document.getElementById("uploadedImage");
+
+        imageEl.src = data.image_url + "?t=" + Date.now(); // cache-bust
         imageEl.style.display = "block";
+
 
     } catch (err) {
         scoreEl.textContent = "Error";
